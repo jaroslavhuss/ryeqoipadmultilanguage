@@ -3,13 +3,23 @@ import React from 'react'
 import Layout from "../../components/Layout"
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import SecuredMarkdown from '../../components/SecuredMarkdown';
 const { width, height } = Dimensions.get("screen");
 const Relugolix = () => {
     const { navigate } = useNavigation();
     return (
-        <Layout>
-            <Text style={styles.nadpis}>Relugolix - mechanismus účinku</Text>
-            <Image source={require("../../assets/mechanismus_01.png")} style={{ width: width - 150, height: height - 350, resizeMode: "contain" }} />
+        <Layout>            
+        <SecuredMarkdown element='text' style={styles.nadpis} keyName="ActionMechanismHeadline1" />
+           <View style={{flexDirection:"row", alignItems:"center"}}>
+            <View style={{width:width/2}}>
+            <SecuredMarkdown element='markdown' keyName="ActionMechanismParagraph1" />
+            </View>
+          
+            <Image source={require("../../assets/mechanismus_01.png")} style={{ width:400, height: height - 350, resizeMode: "contain" }} />
+           </View>
+       
+            
+            
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity onPress={() => {
                     //@ts-ignore

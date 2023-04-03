@@ -32,6 +32,8 @@ import QoL from "./Screens/QoL/QoL"
 import Video1 from './Screens/Videa/Video1';
 import Video2 from './Screens/Videa/Video2';
 
+import Settings from './Screens/Settings';
+
 export default function App() {
   const Drawer = createDrawerNavigator();
   const [loaded] = useFonts({
@@ -126,6 +128,9 @@ export default function App() {
 
         <Drawer.Screen name="video3min" component={Video1} />
         <Drawer.Screen name="video5min" component={Video2} />
+
+
+        <Drawer.Screen name="settings" component={Settings} />
 
 
       </Drawer.Navigator>

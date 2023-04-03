@@ -1,0 +1,1 @@
+export const URL:string = "https://private.gswps.eu:10443"
